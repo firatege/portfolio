@@ -13,7 +13,7 @@ const experiences = [
   {
     id: 1,
     role: 'Software Developer & Data Analyst',
-    company: 'İntten',
+    company: 'Dokuz Eylül University',
     type: 'Full-time',
     period: '1 Year',
     location: 'İzmir, Turkey',
@@ -25,7 +25,7 @@ const experiences = [
   {
     id: 2,
     role: 'Backend Developer',
-    company: 'Moonteeq',
+    company: 'MoonTekno',
     type: 'Part-time',
     period: 'Present',
     location: 'Remote',
@@ -37,7 +37,7 @@ const experiences = [
   {
     id: 3,
     role: 'Data Scientist Intern',
-    company: 'İntten',
+    company: 'Dokuz Eylül University',
     type: 'Internship',
     period: '2 Months',
     location: 'İzmir, Turkey',
