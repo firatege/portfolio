@@ -1,5 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue'
+import profilePhoto from '@/assets/PP.jpg'
 
 const isVisible = ref(false)
 const statsAnimated = ref(false)
@@ -68,7 +69,9 @@ onMounted(() => {
         <!-- Left: Photo & Quick Info -->
         <div class="about-left">
           <div class="photo-container">
-            <div class="photo-frame"></div>
+            <div class="photo-frame">
+              <img :src="profilePhoto" alt="Fırat Ege Bayram" class="profile-photo" />
+            </div>
             <div class="photo-glow"></div>
           </div>
 
