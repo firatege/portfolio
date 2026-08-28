@@ -77,6 +77,114 @@ const projects = [
   // AI & Data Projects
   {
     id: 5,
+    title: 'RAG for GTNH',
+    subtitle: 'Hybrid Retrieval-Augmented Generation Pipeline',
+    description: 'Production-shaped RAG stack answering questions over ~130 unstructured PDFs + a scraped wiki. LLM-driven semantic chunking, local embeddings (transformers.js), pgvector + HNSW hybrid search (cosine + keyword in one query), context-window expansion, and Gemini-based query decomposition + grounded answer synthesis. Deployed live in a Minecraft server chat.',
+    category: 'ai-data',
+    tech: [
+      { name: 'PostgreSQL/pgvector', icon: 'logos:postgresql' },
+      { name: 'RAG', icon: 'carbon:machine-learning' },
+      { name: 'Gemini LLM', icon: 'carbon:ai' },
+      { name: 'HNSW Vector Search', icon: 'carbon:data-vis-4' },
+      { name: 'TypeScript', icon: 'logos:typescript-icon' }
+    ],
+    github: 'https://github.com/firatege/RagForGtnh',
+    color: 'green'
+  },
+  {
+    id: 6,
+    title: 'Deprem Hasar Tespiti',
+    subtitle: 'Satellite-Based Earthquake Damage Classification',
+    description: 'Binary building-damage classifier over pre/post-disaster satellite image pairs (xView2 dataset). Iterative feature engineering — pixel statistics, SSIM, edge deltas, percentile + quadrant features — took a HistGradientBoostingClassifier from F1 0.70 to 0.78 (ROC-AUC 0.93).',
+    category: 'ai-data',
+    tech: [
+      { name: 'Python', icon: 'logos:python' },
+      { name: 'Scikit-learn', icon: 'simple-icons:scikitlearn' },
+      { name: 'Computer Vision', icon: 'carbon:image-search' },
+      { name: 'Pandas', icon: 'simple-icons:pandas' }
+    ],
+    github: 'https://github.com/firatege/deprem-hasar-tespiti',
+    color: 'purple'
+  },
+  {
+    id: 7,
+    title: 'ChatBot',
+    subtitle: 'Retrieval-Based NLP Experiment',
+    description: 'My first hands-on NLP project: TF-IDF intent classification + POS-tag entity extraction + similarity-based response retrieval from Postgres. Kept as the "before" — no embeddings, no LLM — that motivated the move to real RAG.',
+    category: 'ai-data',
+    tech: [
+      { name: 'Python', icon: 'logos:python' },
+      { name: 'PostgreSQL', icon: 'logos:postgresql' },
+      { name: 'TF-IDF/NLP', icon: 'carbon:text-link-analysis' }
+    ],
+    github: 'https://github.com/firatege/ChatBot',
+    color: 'cyan'
+  },
+  {
+    id: 8,
+    title: 'Envanter Tahmin Platformu',
+    subtitle: 'Multi-SKU Demand Forecasting + Order Management',
+    description: 'Graduation thesis turned production stack: SKU-level sales forecasting (Prophet + SARIMA + ETS + RF/XGBoost, NNLS stacking, intermittent-demand models) driving MOQ-constrained purchase-order recommendations. Rust API + Python forecast workers + React dashboard on Kubernetes.',
+    category: 'ai-data',
+    tech: [
+      { name: 'Python', icon: 'logos:python' },
+      { name: 'Rust', icon: 'logos:rust' },
+      { name: 'XGBoost', icon: 'carbon:decision-tree' },
+      { name: 'React', icon: 'logos:react' },
+      { name: 'PostgreSQL', icon: 'logos:postgresql' }
+    ],
+    github: 'https://github.com/firatege/Envanter-Tahmin-Platformu',
+    color: 'green'
+  },
+  {
+    id: 9,
+    title: 'Edu-Rank Prediction',
+    subtitle: 'University Ranking Prediction Model',
+    description: 'Random Forest model predicting university rankings with 73% accuracy. Features hyperparameter tuning, class balancing, and comprehensive performance metrics across 13 rank categories.',
+    category: 'ai-data',
+    tech: [
+      { name: 'Python', icon: 'logos:python' },
+      { name: 'Scikit-learn', icon: 'simple-icons:scikitlearn' },
+      { name: 'Random Forest', icon: 'carbon:decision-tree' },
+      { name: 'Pandas', icon: 'simple-icons:pandas' }
+    ],
+    github: 'https://github.com/firatege/edu-rank-prediction',
+    color: 'purple'
+  },
+  {
+    id: 10,
+    title: 'THE-SCRAPE',
+    subtitle: 'University Rankings Auto-Scraper',
+    description: 'Automated web scraper for Times Higher Education university rankings. Collects and processes ranking data using Python requests library.',
+    category: 'ai-data',
+    tech: [
+      { name: 'Python', icon: 'logos:python' },
+      { name: 'Requests', icon: 'carbon:http' },
+      { name: 'Web Scraping', icon: 'carbon:data-collection' },
+      { name: 'Data Processing', icon: 'carbon:data-refinery' }
+    ],
+    github: 'https://github.com/firatege/THE-SCRAPE',
+    color: 'green'
+  },
+  {
+    id: 11,
+    title: 'Data-Science',
+    subtitle: 'ML & Data Science Portfolio',
+    description: 'Collection of practical ML examples including time series analysis, data preprocessing, and various machine learning implementations from coursework and personal projects.',
+    category: 'ai-data',
+    tech: [
+      { name: 'Python', icon: 'logos:python' },
+      { name: 'Machine Learning', icon: 'carbon:machine-learning' },
+      { name: 'Time Series', icon: 'carbon:chart-line' },
+      { name: 'Pandas', icon: 'simple-icons:pandas' },
+      { name: 'NumPy', icon: 'simple-icons:numpy' }
+    ],
+    github: 'https://github.com/firatege/Data-Science',
+    color: 'cyan'
+  },
+  // Full Stack Projects
+  {
+    id: 12,
     title: 'NeuroCanvas',
     subtitle: 'Real-Time Handwritten Digit Recognition',
     description: 'Full-stack demo with browser canvas, Python/TensorFlow model inference, and CNN activation visualization. Rust backend with Kubernetes deployment.',
@@ -93,78 +201,19 @@ const projects = [
     color: 'purple'
   },
   {
-    id: 6,
-    title: 'RAG for GTNH',
-    subtitle: 'RAG-based Q&A Bot',
-    description: 'Retrieval-Augmented Generation chatbot for Minecraft GTNH modpack. Retrieves wiki info and generates accurate answers using LLM.',
-    category: 'ai-data',
+    id: 13,
+    title: 'GitMyDayTime',
+    subtitle: 'Daily Task Tracking PWA',
+    description: 'Production task/time-tracking app used daily, deployed at gmd.byfeb.com. Installable PWA, group/project management with a Jira-like board, real-time updates over SSE, activity-log-driven insights, JWT + Redis sessions.',
+    category: 'fullstack',
     tech: [
-      { name: 'Python', icon: 'logos:python' },
-      { name: 'RAG', icon: 'carbon:machine-learning' },
-      { name: 'LLM', icon: 'carbon:ai' },
-      { name: 'Vector DB', icon: 'carbon:data-vis-4' }
-    ],
-    github: 'https://github.com/firatege/RagForGtnh',
-    color: 'green'
-  },
-  {
-    id: 7,
-    title: 'ChatBot',
-    subtitle: 'Retrieval-Based Assistant',
-    description: 'Chatbot designed to assist with daily tasks. Answers predefined questions, retrieves stored information, and helps manage day-to-day activities.',
-    category: 'ai-data',
-    tech: [
-      { name: 'Python', icon: 'logos:python' },
+      { name: 'React', icon: 'logos:react' },
+      { name: 'TypeScript', icon: 'logos:typescript-icon' },
       { name: 'PostgreSQL', icon: 'logos:postgresql' },
-      { name: 'NLP', icon: 'carbon:text-link-analysis' }
+      { name: 'Redis', icon: 'logos:redis' },
+      { name: 'Kubernetes', icon: 'logos:kubernetes' }
     ],
-    github: 'https://github.com/firatege/ChatBot',
-    color: 'cyan'
-  },
-  {
-    id: 8,
-    title: 'Edu-Rank Prediction',
-    subtitle: 'University Ranking Prediction Model',
-    description: 'Random Forest model predicting university rankings with 73% accuracy. Features hyperparameter tuning, class balancing, and comprehensive performance metrics across 13 rank categories.',
-    category: 'ai-data',
-    tech: [
-      { name: 'Python', icon: 'logos:python' },
-      { name: 'Scikit-learn', icon: 'simple-icons:scikitlearn' },
-      { name: 'Random Forest', icon: 'carbon:decision-tree' },
-      { name: 'Pandas', icon: 'simple-icons:pandas' }
-    ],
-    github: 'https://github.com/firatege/edu-rank-prediction',
-    color: 'purple'
-  },
-  {
-    id: 9,
-    title: 'THE-SCRAPE',
-    subtitle: 'University Rankings Auto-Scraper',
-    description: 'Automated web scraper for Times Higher Education university rankings. Collects and processes ranking data using Python requests library.',
-    category: 'ai-data',
-    tech: [
-      { name: 'Python', icon: 'logos:python' },
-      { name: 'Requests', icon: 'carbon:http' },
-      { name: 'Web Scraping', icon: 'carbon:data-collection' },
-      { name: 'Data Processing', icon: 'carbon:data-refinery' }
-    ],
-    github: 'https://github.com/firatege/THE-SCRAPE',
-    color: 'green'
-  },
-  {
-    id: 10,
-    title: 'Data-Science',
-    subtitle: 'ML & Data Science Portfolio',
-    description: 'Collection of practical ML examples including time series analysis, data preprocessing, and various machine learning implementations from coursework and personal projects.',
-    category: 'ai-data',
-    tech: [
-      { name: 'Python', icon: 'logos:python' },
-      { name: 'Machine Learning', icon: 'carbon:machine-learning' },
-      { name: 'Time Series', icon: 'carbon:chart-line' },
-      { name: 'Pandas', icon: 'simple-icons:pandas' },
-      { name: 'NumPy', icon: 'simple-icons:numpy' }
-    ],
-    github: 'https://github.com/firatege/Data-Science',
+    github: 'https://github.com/Auth-ism/GitMyDayTime',
     color: 'cyan'
   }
 ]
