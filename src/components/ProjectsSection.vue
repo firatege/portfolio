@@ -16,21 +16,6 @@ const filters = [
 const projects = [
   // Backend Projects
   {
-    id: 1,
-    title: 'SeatRush',
-    subtitle: 'High-Concurrency Ticket Booking Engine',
-    description: 'Solves race conditions using Redis distributed locks and SeaORM transactional integrity. Built for high-performance concurrent booking scenarios.',
-    category: 'backend',
-    tech: [
-      { name: 'Rust', icon: 'logos:rust' },
-      { name: 'Actix-Web', icon: 'simple-icons:actix' },
-      { name: 'Redis', icon: 'logos:redis' },
-      { name: 'SeaORM', icon: 'carbon:database' }
-    ],
-    github: 'https://github.com/firatege/seat_rush',
-    color: 'cyan'
-  },
-  {
     id: 2,
     title: 'BookingAPI-NestJS',
     subtitle: 'RESTful API with NestJS',
@@ -79,7 +64,7 @@ const projects = [
     id: 5,
     title: 'RAG for GTNH',
     subtitle: 'Hybrid Retrieval-Augmented Generation Pipeline',
-    description: 'Production-shaped RAG stack answering questions over ~130 unstructured PDFs + a scraped wiki. LLM-driven semantic chunking, local embeddings (transformers.js), pgvector + HNSW hybrid search (cosine + keyword in one query), context-window expansion, and Gemini-based query decomposition + grounded answer synthesis. Deployed live in a Minecraft server chat.',
+    description: 'Hybrid RAG pipeline over ~130 unstructured PDFs + a scraped wiki. LLM-driven semantic chunking, local embeddings, pgvector + HNSW hybrid search, context-window expansion, and query decomposition + grounded answer synthesis. Deployed live in a Minecraft server chat.',
     category: 'ai-data',
     tech: [
       { name: 'PostgreSQL/pgvector', icon: 'logos:postgresql' },
@@ -777,6 +762,19 @@ onMounted(() => {
   line-height: 1.6;
   margin-bottom: 1rem;
   flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.4) transparent;
+}
+
+.overlay-description::-webkit-scrollbar {
+  width: 4px;
+}
+
+.overlay-description::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 2px;
 }
 
 .overlay-tech {
@@ -784,6 +782,7 @@ onMounted(() => {
   flex-wrap: wrap;
   gap: 0.35rem;
   margin-bottom: 1rem;
+  flex-shrink: 0;
 }
 
 .tech-tag {
@@ -812,6 +811,7 @@ onMounted(() => {
   text-decoration: none;
   transition: all 0.2s ease;
   margin-top: auto;
+  flex-shrink: 0;
 }
 
 .github-btn:hover {
