@@ -68,9 +68,7 @@ onMounted(() => {
         <!-- Left: Photo & Quick Info -->
         <div class="about-left">
           <div class="photo-container">
-            <div class="photo-frame">
-              <img src="/PP.png" alt="Fırat Ege Bayram" class="profile-photo" />
-            </div>
+            <div class="photo-frame"></div>
             <div class="photo-glow"></div>
           </div>
 

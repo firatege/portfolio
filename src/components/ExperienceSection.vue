@@ -15,12 +15,12 @@ const experiences = [
     role: 'Software Developer & Data Analyst',
     company: 'İntten',
     type: 'Full-time',
-    period: 'Present',
+    period: '1 Year',
     location: 'İzmir, Turkey',
-    description: 'Working on data analysis pipelines and software development. Building scalable solutions for data-driven decision making.',
+    description: 'Worked on data analysis pipelines and software development. Built scalable solutions for data-driven decision making.',
     skills: ['Python', 'SQL', 'Data Analysis', 'Backend Development'],
     icon: 'carbon:analytics',
-    current: true
+    current: false
   },
   {
     id: 2,
